@@ -82,3 +82,33 @@ body {
   /* text-decoration: none; */
   color: black;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e4e2dd;
+  border-top: 1px solid grey;
+}
+.footer-logo {
+  width: 200px;
+}
+
+.footer div {
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer div span {
+  font-size: 7px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+
+.footer-main-links {
+  display: flex;
+}
