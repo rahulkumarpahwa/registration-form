@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Resgistration Form</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    Hello! Ejs
+    <form action="/register" method="post" class="input-form">
+      <div>
+        <label for="email">Enter your Email</label>
+        <input type="text" name="email" id="email" required />
+      </div>
+
+      <div>
+        <label for="password">Enter your Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <div><button type="submit">Submit</button></div>
+    </form>
+
+    <script src="scripts/app.js"></script>
   </body>
 </html>
