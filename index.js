@@ -32,19 +32,31 @@ app.get("/form", (req, res) => {
   res.render("register");
 });
 
+app.get("/about", (req,res)=>{
+res.redirect("about");
+});
+
+app.get("/contact", (req,res)=>{
+res.redirect("contact");
+});
+
 app.post("/register", async (req, res) => {
   try {
     // console.log(req.body);
-    // res.send("Got the post request");
     const { name, email, password } = req.body;
-    let newRegister = new Register({
-      name: name,
-      email: email,
-      password: password,
-    });
-    await newRegister.save();
-    // res.render("/");
-    res.send("user Registered successfully");
+    const existingUser = await Register.findOne({ email: email });
+    if (!existingUser) {
+      const newRegister = new Register({
+        name: name,
+        email: email,
+        password: password,
+      });
+      await newRegister.save();
+      console.log("user Registered successfully");
+      res.render("user", { name: name, email: email });
+    } else {
+      res.render("error", { email: email });
+    }
   } catch (error) {
     console.log("Error" + error);
   }

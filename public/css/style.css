@@ -112,3 +112,51 @@ body {
 .footer-main-links {
   display: flex;
 }
+
+.user-div {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.user-div button a,
+.error button a {
+  color: black;
+  text-decoration: none;
+}
+.user-div button {
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 7px;
+  color: grey;
+  width: 200px;
+  margin: 15px 0;
+}
+
+.user-div h2 {
+  margin: 10px 0;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 50px;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.error button {
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 7px;
+  color: grey;
+  width: 200px;
+  margin: 15px 0;
+}
