@@ -33,11 +33,11 @@ app.get("/form", (req, res) => {
 });
 
 app.get("/about", (req,res)=>{
-res.redirect("about");
+res.render("about");
 });
 
 app.get("/contact", (req,res)=>{
-res.redirect("contact");
+res.render("contact");
 });
 
 app.post("/register", async (req, res) => {
