@@ -13,6 +13,21 @@ const registerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  age: {
+    type: Number,
+    required: true,
+    min: 0,
+    max: 200,
+  },
+  mobile: {
+    type: Number,
+    required: true,
+    max: 10000000000,
+  },
+  gender: {
+    type: String,
+    required: true,
+  },
 });
 
 const Register = mongoose.model("Register", registerSchema);

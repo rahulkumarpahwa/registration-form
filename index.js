@@ -32,24 +32,27 @@ app.get("/form", (req, res) => {
   res.render("register");
 });
 
-app.get("/about", (req,res)=>{
-res.render("about");
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
-app.get("/contact", (req,res)=>{
-res.render("contact");
+app.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
 app.post("/register", async (req, res) => {
   try {
     // console.log(req.body);
-    const { name, email, password } = req.body;
+    const { name, email, password, age, mobile, gender } = req.body;
     const existingUser = await Register.findOne({ email: email });
     if (!existingUser) {
       const newRegister = new Register({
-        name: name,
-        email: email,
-        password: password,
+        name,
+        email,
+        password,
+        age,
+        gender,
+        mobile,
       });
       await newRegister.save();
       console.log("user Registered successfully");
