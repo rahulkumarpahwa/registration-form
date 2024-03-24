@@ -1,0 +1,32 @@
+.navbara {
+  display: flex;
+  justify-content: center;
+  height: 35px !important;
+  align-items: center;
+  padding: 10px 10px;
+  box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.5);
+  background-color: #fecd45;
+}
+
+.navbara a {
+  text-decoration: none;
+  color: #2568fb;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.aboutn-btn {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 12px;
+  width: 90px;
+}
+
+.aboutn-btn a {
+  text-decoration: none;
+  color: #827f7f;
+  font-weight: 600;
+}

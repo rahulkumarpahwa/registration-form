@@ -25,19 +25,11 @@ main()
   });
 
 app.get("/", (req, res) => {
-  res.redirect("/form");
-});
-
-app.get("/form", (req, res) => {
   res.render("register");
 });
 
 app.get("/about", (req, res) => {
   res.render("about");
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact");
 });
 
 app.post("/register", async (req, res) => {
@@ -56,9 +48,9 @@ app.post("/register", async (req, res) => {
       });
       await newRegister.save();
       console.log("user Registered successfully");
-      res.render("user", { name: name, email: email });
+      res.render("user", { name, email, mobile });
     } else {
-      res.render("error", { email: email });
+      res.render("error", { email });
     }
   } catch (error) {
     console.log("Error" + error);
