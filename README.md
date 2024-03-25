@@ -1,5 +1,5 @@
 # Introduction :
-This Registration Form App has been created by (Rahul Kumar)[https://www.linkedin.com/in/rahulkumarpahwa] as a part of learning Full Stack development.
+This Registration Form App has been created by [Rahul Kumar](https://www.linkedin.com/in/rahulkumarpahwa) as a part of learning Full Stack development.
 
 # Features :
 - You can Register an User using Name, Email, Age, Gender, Mobile Number and Password.
@@ -19,4 +19,4 @@ This Registration Form App has been created by (Rahul Kumar)[https://www.linkedi
 - Bootstrap
 - CSS
 
-# Live : (Registration Form App)[https://www.linkedin.com/in/rahulkumarpahwa]
+# Live : [Registration Form App](https://www.linkedin.com/in/rahulkumarpahwa)
