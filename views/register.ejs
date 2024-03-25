@@ -10,109 +10,114 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <%- include('includes/navbar.ejs') %>
-    <div class="container">
-      <form
-        action="/register"
-        method="post"
-        novalidate
-        class="needs-validation"
-      >
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            placeholder="Enter Your Name"
-            required
-          />
-          <div class="valid-feedback">Name looks good!</div>
-          <div class="invalid-feedback">Name should be valid!</div>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="text"
-            name="email"
-            id="email"
-            class="form-control"
-            placeholder="Enter Your Email"
-            required
-          />
-          <div class="valid-feedback">Email looks good!</div>
-          <div class="invalid-feedback">Please Enter an Email!</div>
-        </div>
-
-        <div class="row">
-          <div class="mb-3 col-md-6">
-            <label for="age" class="form-label">Age</label>
+    <div>
+      <div class="contain">
+        <form
+          action="/register"
+          method="post"
+          novalidate
+          class="needs-validation"
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
             <input
-              name="age"
-              id="age"
-              type="number"
+              type="text"
+              name="name"
+              id="name"
               class="form-control"
-              placeholder="Enter Your Age (years)"
+              placeholder="Enter Your Name"
               required
             />
-            <div class="valid-feedback">Age looks good!</div>
-            <div class="invalid-feedback">Age should be valid!</div>
+            <div class="valid-feedback">Name looks good!</div>
+            <div class="invalid-feedback">Name should be valid!</div>
           </div>
-          <div class="mb-3 col-md-6">
-            <label for="gender" class="form-label">Gender</label>
-            <select class="form-select" id="gender" required>
-              <option selected disabled value="">Choose Your Gender</option>
-              <option>Male</option>
-              <option>Female</option>
-            </select>
-            <div class="valid-feedback">Value looks good!</div>
-            <div id="gender" class="invalid-feedback">
-              Please select a valid Value!
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter Your Email"
+              required
+            />
+            <div class="valid-feedback">Email looks good!</div>
+            <div class="invalid-feedback">Please Enter an Email!</div>
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col-md-7">
+              <label for="age" class="form-label">Age</label>
+              <input
+                name="age"
+                id="age"
+                type="number"
+                class="form-control"
+                placeholder="Enter Your Age (years)"
+                required
+              />
+              <div class="valid-feedback">Age looks good!</div>
+              <div class="invalid-feedback">Age should be valid!</div>
+            </div>
+            <div class="mb-3 col-md-5">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-select" id="gender" name="gender" required>
+                <option selected disabled value="">Choose Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <div class="valid-feedback">Value looks good!</div>
+              <div id="gender" class="invalid-feedback">
+                Please select a valid Value!
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="mb-3">
-          <label for="number" class="form-label">Mobile Number</label>
-          <input
-            type="number"
-            name="number"
-            id="number"
-            class="form-control"
-            placeholder="+91-XXXXX-XXXXX"
-            required
-          />
-          <div class="valid-feedback">Mobile Number looks good!</div>
-          <div class="invalid-feedback">Mobile Number should be valid!</div>
-        </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input
+              type="number"
+              name="mobile"
+              id="mobile"
+              class="form-control"
+              placeholder="XXXXX-12345"
+              required
+            />
+            <div class="valid-feedback">Mobile Number looks good!</div>
+            <div class="invalid-feedback">Mobile Number should be valid!</div>
+          </div>
 
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="form-control"
-            placeholder="Create A Password"
-            required
-          />
-          <div class="valid-feedback">Password looks good!</div>
-          <div class="invalid-feedback">Password should be valid!</div>
-        </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control"
+              placeholder="Create A Password"
+              required
+            />
+            <div class="valid-feedback">Password looks good!</div>
+            <div class="invalid-feedback">Password should be valid!</div>
+          </div>
 
-        <!-- <br /><br /> -->
-        <button class="btn btn-dark add-btn mt-3 mb-3" type="submit">
-          Register
-        </button>
-        <button class="btn btn-dark add-btn mt-3 mb-3 mx-4" type="Reset">
-          Reset
-        </button>
-        <!-- <br /><br /> -->
-      </form>
+          <button class="btn btn-primary submit mt-3 mb-3" type="submit">
+            Register
+          </button>
+          <button class="btn btn-danger mt-3 mb-3 mx-4" type="Reset">
+            Reset
+          </button>
+        </form>
+      </div>
     </div>
     <%- include('includes/footer.ejs') %>
     <script

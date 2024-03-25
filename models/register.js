@@ -22,7 +22,6 @@ const registerSchema = new mongoose.Schema({
   mobile: {
     type: Number,
     required: true,
-    max: 10000000000,
   },
   gender: {
     type: String,

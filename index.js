@@ -48,12 +48,13 @@ app.post("/register", async (req, res) => {
       });
       await newRegister.save();
       console.log("user Registered successfully");
-      res.render("user", { name, email, mobile });
+      res.render("user", { name, email });
     } else {
       res.render("error", { email });
     }
   } catch (error) {
     console.log("Error" + error);
+    res.send(error);
   }
 });
 
